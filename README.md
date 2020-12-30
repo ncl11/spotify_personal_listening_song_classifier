@@ -7,7 +7,7 @@ With these issues in mind we ask the question "Is it possible to put aside genre
 **Language:**  Python 3.8.3  
 **Packages:** datetime, sklearn, xgboost, numpy, matplotlib, seaborn, requests, pandas and json  
 **Resources:** _get_spotify_uri method partially adapted from https://github.com/TheComeUpCode/SpotifyGeneratePlaylist/blob/master/create_playlist.py  
-**Descriptions of Audio Features pulled from Spotify API:** https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/
+**Descriptions of Audio Features Pulled from Spotify API:** https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/
 
 ### get_data Notebook  
 With the Create_DF class a user can create two different data sets.  The add_audio_features method takes in a user's personal listening json files and creates a dataframe with audio features from the Spotify API and target variable with value 0 for songs listened to once and 1 for songs listened to more than once.  The merge_personal_kaggle method merges the df created using add_audio_features with a random sample from the Kaggle Spotify data set.  The target variable 'y' is changed to 0 for songs from the random sample and 1 for song from personal listening history.  This code could easily be adapted to create a dataset with a different user's personal listening data.  Request your personal listening data from Spotify and download the Kaggle Spotify dataset.  Client_id, client_secret, spotify_token, spotify_user_id can all be obtained from Spotify's website.  Comments have been provided in the notebook to assist in making the necessary changes.  For this project we use the dataset created by the merge_personal_kaggle method.  
